@@ -1,0 +1,105 @@
+<!-- Enter your HTML code here. Plagiarism is NOT tolerated! -->
+<html>
+
+<head>
+    <title>Task Management App</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8">
+</head>
+
+<body>
+    <div class="container">
+        <div class='theader'>
+            <div class="table_header">
+                <p>
+                    <label for="new-task">Add a Task</label>
+                </p>
+            </div>
+            <div class="table_header">
+                <p>
+                    <label for="new-task">Priority</label>
+                </p>
+            </div>
+            <div class="table_header">
+                <p>
+                    <label for="new-task">Deadline</label>
+                </p>
+            </div>
+            <div class="table_header">
+                <p>
+                    <label for="new-task">Actions</label>
+                </p>
+            </div>
+        </div>
+        <div class='table_row'>
+            <div class='table_small'>
+                <p>
+                    <input id="new-task" type="text">
+
+                </p>
+            </div>
+            <div class='table_small'>
+                <p>
+                    <select class="prioritySelect">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+
+                </p>
+            </div>
+            <div class='table_small'>
+                <p>
+                    <input id="deadLineId" type="text" name="date" placeholder="mm/dd/yyyy" onkeyup="
+                            var v = this.value;
+                            if (v.match(/^\d{2}$/) !== null) {
+                                this.value = v + '/';
+                            } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
+                                this.value = v + '/';
+                            }" maxlength="10">
+                </p>
+            </div>
+
+            <div class='table_small'>
+                <p>
+
+                    <button>Add</button>
+                </p>
+
+            </div>
+
+        </div>
+        <div class="table_row">
+
+            <h3>Todo</h3>
+        </div>
+        <div class="table_row"></div>
+        <div class="table_row"></div>
+        <div class="table_row"></div>
+
+        <div class='table_row'>
+
+            <ul id="incomplete-tasks">
+
+            </ul>
+        </div>
+        <div class="table_row">
+
+            <h3>Completed</h3>
+        </div>
+        <div class="table_row"></div>
+        <div class="table_row"></div>
+        <div class="table_row"></div>
+
+        <div class='table_row'>
+
+            <ul id="completed-tasks">
+
+            </ul>
+        </div>
+
+        <script type="text/javascript" src="app.js"></script>
+
+</body>
+
+</html>
